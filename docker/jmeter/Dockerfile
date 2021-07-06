@@ -15,12 +15,4 @@ RUN unzip -o jpgc-casutg-2.9.zip -d ${JMETER_HOME}
 RUN wget https://jmeter-plugins.org/files/packages/jpgc-tst-2.5.zip
 RUN unzip -o jpgc-tst-2.5.zip -d ${JMETER_HOME}
 
-# https://jmeter.apache.org/usermanual/remote-test.html
-# RUN echo "server.rmi.localport=43295" >> ${JMETER_HOME}/bin/system.properties
-# RUN echo "server.rmi.ssl.disable=true" >> ${JMETER_HOME}/bin/jmeter.properties
-# RUN echo "server.rmi.ssl.disable=true" >> ${JMETER_HOME}/bin/user.properties
-
-# https://jmeter.apache.org/usermanual/remote-test.html#portchange
-# RUN echo "SERVER_PORT=43294" >> ${JMETER_HOME}/bin/system.properties
-
 ENTRYPOINT ["/entrypoint.sh"]
